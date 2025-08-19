@@ -1,9 +1,11 @@
 import { toast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 import iconChat from "@/assets/icon-chat.png";
 import iconProject from "@/assets/icon-project.png";
 import iconVideo from "@/assets/icon-video.png";
 
 const Features = () => {
+  const navigate = useNavigate();
   const features = [
     {
       icon: iconChat,
@@ -73,7 +75,10 @@ const Features = () => {
             </button>
             <button 
               className="border-2 border-primary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover"
-              onClick={() => toast({ title: "All Features", description: "Exploring comprehensive feature list... Chat, Projects, Video & More!" })}
+              onClick={() => {
+                navigate('/features');
+                toast({ title: "All Features", description: "Exploring comprehensive feature list... Chat, Projects, Video & More!" });
+              }}
             >
               View All Features
             </button>
