@@ -8,35 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* MetaDesk Design System - Warm Collaborative Theme */
+    --background: 45 15% 97%;
+    --foreground: 220 8% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 8% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 8% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand Colors */
+    --primary: 171 100% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 171 100% 30%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 100% 85%;
+    --secondary-foreground: 220 8% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 22 93% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 45 15% 94%;
+    --muted-foreground: 220 8% 45%;
+
+    /* Feature Colors */
+    --feature-teal: 175 100% 40%;
+    --feature-coral: 15 100% 70%;
+    --feature-yellow: 45 100% 65%;
+    --feature-purple: 260 100% 70%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 15% 90%;
+    --input: 45 15% 90%;
+    --ring: 171 100% 35%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Design System Enhancements */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(45 20% 95%));
+    --gradient-feature: linear-gradient(135deg, hsl(var(--feature-teal) / 0.1), hsl(var(--feature-coral) / 0.1));
+    --shadow-card: 0 4px 20px hsl(220 8% 15% / 0.08);
+    --shadow-hover: 0 8px 30px hsl(220 8% 15% / 0.12);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
