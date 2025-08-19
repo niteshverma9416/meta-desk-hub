@@ -1,3 +1,4 @@
+import { toast } from "@/hooks/use-toast";
 import iconChat from "@/assets/icon-chat.png";
 import iconProject from "@/assets/icon-project.png";
 import iconVideo from "@/assets/icon-video.png";
@@ -64,10 +65,16 @@ const Features = () => {
             Ready to transform your remote work experience?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary text-primary-foreground px-8 py-3 rounded-xl font-semibold hover:bg-primary-hover transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover">
+            <button 
+              className="bg-primary text-primary-foreground px-8 py-3 rounded-xl font-semibold hover:bg-primary-hover transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover"
+              onClick={() => toast({ title: "Getting Started!", description: "Redirecting to onboarding... Let's build your virtual workspace!" })}
+            >
               Get Started Now
             </button>
-            <button className="border-2 border-primary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover">
+            <button 
+              className="border-2 border-primary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover"
+              onClick={() => toast({ title: "All Features", description: "Exploring comprehensive feature list... Chat, Projects, Video & More!" })}
+            >
               View All Features
             </button>
           </div>

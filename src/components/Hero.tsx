@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { toast } from "@/hooks/use-toast";
 import heroIllustration from "@/assets/hero-illustration.png";
 
 const Hero = () => {
@@ -16,10 +17,20 @@ const Hero = () => {
               Join thousands of teams in our virtual coworking space.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="text-lg">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="text-lg"
+                onClick={() => toast({ title: "Welcome to MetaDesk!", description: "Your free trial is starting. Prepare for amazing collaboration!" })}
+              >
                 Start Free Trial
               </Button>
-              <Button variant="outline" size="lg" className="text-lg">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg"
+                onClick={() => toast({ title: "Demo Video", description: "Loading interactive demo... See MetaDesk in action!" })}
+              >
                 Watch Demo
               </Button>
             </div>

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { toast } from "@/hooks/use-toast";
 
 const Header = () => {
   return (
@@ -13,22 +14,52 @@ const Header = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            <a 
+              href="#features" 
+              className="text-foreground/80 hover:text-primary transition-colors font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                toast({ title: "Features", description: "Exploring MetaDesk's powerful collaboration tools" });
+              }}
+            >
               Features
             </a>
-            <a href="#pricing" className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            <a 
+              href="#pricing" 
+              className="text-foreground/80 hover:text-primary transition-colors font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                toast({ title: "Pricing", description: "Check out our flexible pricing plans for teams of all sizes" });
+              }}
+            >
               Pricing
             </a>
-            <a href="#about" className="text-foreground/80 hover:text-primary transition-colors font-medium">
+            <a 
+              href="#about" 
+              className="text-foreground/80 hover:text-primary transition-colors font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                toast({ title: "About Us", description: "Learn more about MetaDesk's mission to revolutionize remote work" });
+              }}
+            >
               About
             </a>
           </div>
           
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden sm:inline-flex">
+            <Button 
+              variant="ghost" 
+              className="hidden sm:inline-flex"
+              onClick={() => toast({ title: "Sign In", description: "Redirecting to sign in page..." })}
+            >
               Sign In
             </Button>
-            <Button variant="hero" size="lg">
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => toast({ title: "Free Trial Started!", description: "Welcome to MetaDesk! Setting up your workspace..." })}
+            >
               Start Free Trial
             </Button>
           </div>
