@@ -20,7 +20,10 @@ const PricingPage = () => {
         "Real-time chat",
         "5GB cloud storage",
         "Email support",
-        "Basic task management"
+        "Basic task management",
+        "Basic analytics",
+        "Limited integrations",
+        "Community support"
       ],
       badge: null,
       buttonText: "Get Started Free",
@@ -61,7 +64,7 @@ const PricingPage = () => {
         "API access",
         "Custom integrations",
         "SSO authentication",
-        "Compliance tools"
+        
       ],
       badge: null,
       buttonText: "Contact Sales",

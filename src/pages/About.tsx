@@ -32,25 +32,11 @@ const AboutPage = () => {
 
   const team = [
     {
-      name: "Sarah Chen",
-      role: "CEO & Co-Founder",
+      name: "Nitesh Verma",
+      role: "Founder",
       description: "Former VP of Product at leading tech companies, passionate about remote work transformation."
     },
-    {
-      name: "Marcus Rodriguez",
-      role: "CTO & Co-Founder",
-      description: "Full-stack engineer with 15+ years experience building scalable collaboration platforms."
-    },
-    {
-      name: "Emily Watson",
-      role: "Head of Design",
-      description: "UX design expert focused on creating intuitive experiences for distributed teams."
-    },
-    {
-      name: "David Kim",
-      role: "VP of Engineering",
-      description: "Engineering leader committed to building reliable, secure infrastructure for remote teams."
-    }
+    
   ];
 
   return (
@@ -117,7 +103,7 @@ const AboutPage = () => {
               <h2 className="text-4xl font-bold text-center text-foreground mb-8">Our Story</h2>
               <div className="prose prose-lg mx-auto text-center">
                 <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                  MetaDesk was born in 2023 when our founders, like millions of others, experienced 
+                  MetaDesk was born in 2025 when we found that millions of workers, experienced 
                   the challenges of remote work firsthand. Despite having access to various tools, 
                   something was missing - the spontaneous collaboration and connection that happens 
                   naturally in physical offices.
