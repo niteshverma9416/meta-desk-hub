@@ -28,11 +28,12 @@ const Header = () => {
             <a 
               href="#features" 
               className="text-foreground/80 hover:text-primary transition-colors font-medium"
-              onClick={(e) => {
+               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
-                toast({ title: "Features", description: "Exploring MetaDesk's powerful collaboration tools" });
+                window.location.href = '/features';
               }}
+                
+              
             >
               Features
             </a>
