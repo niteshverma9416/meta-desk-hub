@@ -26,21 +26,21 @@ const Header = () => {
               Features
             </a>
             <a 
-              href="#pricing" 
+              href="/pricing" 
               className="text-foreground/80 hover:text-primary transition-colors font-medium"
               onClick={(e) => {
                 e.preventDefault();
-                toast({ title: "Pricing", description: "Check out our flexible pricing plans for teams of all sizes" });
+                window.location.href = '/pricing';
               }}
             >
               Pricing
             </a>
             <a 
-              href="#about" 
+              href="/about" 
               className="text-foreground/80 hover:text-primary transition-colors font-medium"
               onClick={(e) => {
                 e.preventDefault();
-                toast({ title: "About Us", description: "Learn more about MetaDesk's mission to revolutionize remote work" });
+                window.location.href = '/about';
               }}
             >
               About
