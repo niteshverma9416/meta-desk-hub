@@ -72,25 +72,25 @@ const PricingPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-6">
+      <main className="pt-20 sm:pt-24 pb-12 sm:pb-16">
+        <div className="container mx-auto px-4 lg:px-6">
           {/* Header Section */}
           <div className="text-center mb-16 animate-fade-in">
             <Link to="/" className="inline-flex items-center gap-2 text-primary hover:text-primary-hover mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4" />
               Back to Home
             </Link>
-            <h1 className="text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4 sm:px-0">
               Simple, Transparent Pricing
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
               Choose the plan that's right for your team. All plans include our core collaboration 
               features with no hidden fees.
             </p>
           </div>
 
           {/* Pricing Cards */}
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16">
             {plans.map((plan, index) => (
               <Card 
                 key={index}

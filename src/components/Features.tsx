@@ -28,53 +28,53 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+    <section id="features" className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Everything your remote team needs
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
             MetaDesk combines the best collaboration tools in one seamless platform, 
             designed to make remote work feel natural and productive.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-hover transition-all duration-300 transform hover:scale-105 animate-fade-in group"
+              className="bg-card rounded-2xl p-6 sm:p-8 shadow-card hover:shadow-hover transition-all duration-300 transform hover:scale-105 animate-fade-in group"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="mb-6">
-                <div className={`w-16 h-16 bg-${feature.color}/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <img src={feature.icon} alt={feature.title} className="w-10 h-10" />
+              <div className="mb-4 sm:mb-6">
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-${feature.color}/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <img src={feature.icon} alt={feature.title} className="w-6 h-6 sm:w-10 sm:h-10" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
+        <div className="text-center mt-8 sm:mt-12">
+          <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 px-4 sm:px-0">
             Ready to transform your remote work experience?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
             <button 
-              className="bg-primary text-primary-foreground px-8 py-3 rounded-xl font-semibold hover:bg-primary-hover transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover"
+              className="bg-primary text-primary-foreground px-6 sm:px-8 py-3 rounded-xl font-semibold hover:bg-primary-hover transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover text-sm sm:text-base w-full sm:w-auto"
               onClick={() => toast({ title: "Getting Started!", description: "Redirecting to onboarding... Let's build your virtual workspace!" })}
             >
               Get Started Now
             </button>
             <button 
-              className="border-2 border-primary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover"
+              className="border-2 border-primary text-primary px-6 sm:px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-card hover:shadow-hover text-sm sm:text-base w-full sm:w-auto"
               onClick={() => {
                 navigate('/features');
                 toast({ title: "All Features", description: "Exploring comprehensive feature list... Chat, Projects, Video & More!" });

@@ -56,18 +56,18 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-6">
+      <main className="pt-20 sm:pt-24 pb-12 sm:pb-16">
+        <div className="container mx-auto px-4 lg:px-6">
           {/* Header Section */}
           <div className="text-center mb-16 animate-fade-in">
             <Link to="/" className="inline-flex items-center gap-2 text-primary hover:text-primary-hover mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4" />
               Back to Home
             </Link>
-            <h1 className="text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4 sm:px-0">
               About MetaDesk
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
               We're on a mission to revolutionize remote work by creating the ultimate 
               virtual coworking platform that brings teams together, no matter where they are.
             </p>
@@ -88,7 +88,7 @@ const AboutPage = () => {
           {/* Values Section */}
           <div className="mb-20">
             <h2 className="text-4xl font-bold text-center text-foreground mb-12">Our Values</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {values.map((value, index) => (
                 <Card 
                   key={index}
@@ -139,7 +139,7 @@ const AboutPage = () => {
           {/* Team Section */}
           <div className="mb-20">
             <h2 className="text-4xl font-bold text-center text-foreground mb-12">Meet Our Team</h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
               {team.map((member, index) => (
                 <Card 
                   key={index}
