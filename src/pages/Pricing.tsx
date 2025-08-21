@@ -45,9 +45,9 @@ const PricingPage = () => {
         "Calendar integration",
         "Custom branding"
       ],
-      badge: "Most Popular",
+      badge: "null",
       buttonText: "Start Free Trial",
-      popular: true
+      popular: false
     },
     {
       name: "Enterprise",
