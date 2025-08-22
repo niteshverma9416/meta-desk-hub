@@ -7,8 +7,9 @@ import Index from "./pages/Index";
 import FeaturesPage from "./pages/Features";
 import PricingPage from "./pages/Pricing";
 import AboutPage from "./pages/About";
-import ContactPage from "./pages/contact";
+import ContactPage from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import SigninPage from "./pages/Singin";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +24,16 @@ const App = () => (
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/signin" element={<SigninPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Example of a custom route */}
+          {/* <Route path="/custom" element={<CustomComponent />} /> */}
+          
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Example of a custom route */}
+          {/* <Route path="/custom" element={<CustomComponent />} /> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           
           {/* Catch-all route for 404 Not Found */}
