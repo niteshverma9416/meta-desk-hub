@@ -75,7 +75,10 @@ const Header = () => {
             <Button 
               variant="ghost" 
               className="hidden lg:inline-flex"
-              onClick={() => toast({ title: "Sign In", description: "Redirecting to sign in page..." })}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/singin';
+              }}
             >
               Sign In
             </Button>
