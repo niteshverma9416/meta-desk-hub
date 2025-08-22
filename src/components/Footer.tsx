@@ -30,8 +30,18 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Product</h4>
             <ul className="space-y-2 text-background/80 text-xs sm:text-sm">
-              <li><a href="#" className="hover:text-background transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Pricing</a></li>
+              <li><a href="#" className="hover:text-background transition-colors" 
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/features';
+              }}
+              >Features</a></li>
+              <li><a href="#" className="hover:text-background transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/pricing';
+              }}
+              >Pricing</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Security</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Enterprise</a></li>
             </ul>
@@ -41,7 +51,12 @@ const Footer = () => {
             <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Support</h4>
             <ul className="space-y-2 text-background/80 text-xs sm:text-sm">
               <li><a href="#" className="hover:text-background transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Contact Us</a></li>
+              <li><a href="#" className="hover:text-background transition-colors"  
+               onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/contact';
+              }}
+              >Contact Us</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Status</a></li>
               <li><a href="#" className="hover:text-background transition-colors">Community</a></li>
             </ul>

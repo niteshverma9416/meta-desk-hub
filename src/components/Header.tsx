@@ -57,6 +57,17 @@ const Header = () => {
             >
               About
             </a>
+            
+            <a 
+              href="/contact" 
+              className="text-foreground/80 hover:text-primary transition-colors font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/contact';
+              }}
+            >
+              Contact Us
+            </a>
           </div>
           
           {/* Desktop Action Buttons */}
