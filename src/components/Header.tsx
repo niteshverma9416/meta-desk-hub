@@ -86,7 +86,11 @@ const Header = () => {
               variant="hero" 
               size="lg"
               className="hidden sm:inline-flex"
-              onClick={() => toast({ title: "Free Trial Started!", description: "Welcome to MetaDesk! Setting up your workspace..." })}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/start-free-trial';
+                toast({ title: "Free Trial Started!", description: "Welcome to MetaDesk! Setting up your workspace..." });
+              }}
             >
               Start Free Trial
             </Button>
@@ -177,10 +181,14 @@ const Header = () => {
                     variant="hero" 
                     size="lg"
                     className="justify-start text-lg"
-                    onClick={() => {
-                      setIsOpen(false);
-                      toast({ title: "Free Trial Started!", description: "Welcome to MetaDesk! Setting up your workspace..." });
-                    }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick('about', () => {
+                        window.location.href = '/start-free-trial';
+                        toast({ title: "Free Trial Started!", description: "Welcome to MetaDesk! Setting up your workspace..."
+                      });
+                      });
+                    }} 
                   >
                     Start Free Trial
                   </Button>

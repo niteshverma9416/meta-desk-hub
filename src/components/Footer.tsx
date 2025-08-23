@@ -14,15 +14,26 @@ const Footer = () => {
               The virtual coworking platform that brings remote teams together. 
               Connect, collaborate, and create from anywhere in the world.
             </p>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors cursor-pointer">
-                <span className="text-xs sm:text-sm font-bold">T</span>
+            <div className="flex flex-col space-y-2">
+              <div className="w-28 h-8 sm:w-32 sm:h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors cursor-pointer"
+                onClick={() => {
+                  window.open('https://twitter.com/', '_blank');
+                }}
+              >
+                <span className="text-xs sm:text-sm font-bold">Twitter</span>
               </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors cursor-pointer">
-                <span className="text-xs sm:text-sm font-bold">L</span>
+              <div className="w-28 h-8 sm:w-32 sm:h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors cursor-pointer"
+                onClick={() => {
+                  window.open('https://www.linkedin.com/', '_blank');
+                }}
+              >
+                <span className="text-xs sm:text-sm font-bold">LinkedIn</span>
               </div>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors cursor-pointer">
-                <span className="text-xs sm:text-sm font-bold">G</span>
+              <div
+                className="w-28 h-8 sm:w-32 sm:h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors cursor-pointer"
+                
+              >
+                <span className="text-xs sm:text-sm font-bold">Gmail</span>
               </div>
             </div>
           </div>
@@ -30,12 +41,18 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Product</h4>
             <ul className="space-y-2 text-background/80 text-xs sm:text-sm">
-              <li><a href="#" className="hover:text-background transition-colors" 
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = '/features';
-              }}
-              >Features</a></li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-background transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/features';
+                  }}
+                >
+                  Features
+                </a>
+              </li>
               <li><a href="#" className="hover:text-background transition-colors"
               onClick={(e) => {
                 e.preventDefault();

@@ -33,8 +33,9 @@ const AboutPage = () => {
   const team = [
     {
       name: "Nitesh Verma",
-      role: "Founder",
-      description: "Former VP of Product at leading tech companies, passionate about remote work transformation."
+      role: "Frontend Developer",
+      description: "Nitesh is passionate about crafting intuitive user interfaces that enhance user experience. With a keen eye for design and detail, he ensures that every interaction on MetaDesk is seamless and engaging."
+    
     },
     
   ];

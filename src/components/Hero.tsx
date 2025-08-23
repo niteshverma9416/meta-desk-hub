@@ -21,7 +21,10 @@ const Hero = () => {
                 variant="hero" 
                 size="lg" 
                 className="text-base sm:text-lg w-full sm:w-auto"
-                onClick={() => toast({ title: "Welcome to MetaDesk!", description: "Your free trial is starting. Prepare for amazing collaboration!" })}
+                onClick={() => {
+                  window.location.href = '/start-free-trial';
+                  toast({ title: "Free Trial Started!", description: "Welcome to MetaDesk! Setting up your workspace..." });
+                }}
               >
                 Start Free Trial
               </Button>

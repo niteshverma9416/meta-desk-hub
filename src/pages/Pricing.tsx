@@ -31,7 +31,7 @@ const PricingPage = () => {
     },
     {
       name: "Professional",
-      price: "$12",
+      price: "₹999",
       period: "per user/month",
       description: "Advanced features for growing teams and businesses",
       features: [
@@ -51,7 +51,7 @@ const PricingPage = () => {
     },
     {
       name: "Enterprise",
-      price: "$29",
+      price: "₹4999",
       period: "per user/month",
       description: "Complete solution for large organizations with advanced needs",
       features: [
