@@ -9,7 +9,7 @@ import PricingPage from "./pages/Pricing";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import SigninPage from "./pages/Signin";
+import SignInPage from "./pages/Signin";
 import  StartFreeTrialPage from "./pages/StartFreeTrial";
 
 const queryClient = new QueryClient();
@@ -25,7 +25,7 @@ const App = () => (
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/signin" element={<SigninPage/>} />
+          <Route path="/signIn" element={<SignInPage/>} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/start-free-trial" element={<StartFreeTrialPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
