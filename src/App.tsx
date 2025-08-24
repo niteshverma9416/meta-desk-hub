@@ -11,6 +11,7 @@ import ContactPage from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import SigninPage from "./pages/SingIn";
 import  StartFreeTrialPage from "./pages/StartFreeTrial";
+import SignUpPage from "./pages/SingUp";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/start-free-trial" element={<StartFreeTrialPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           {/* Example of a custom route */}
           {/* <Route path="/custom" element={<CustomComponent />} /> */}
