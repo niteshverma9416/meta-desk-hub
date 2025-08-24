@@ -102,7 +102,11 @@ window.location.href = '/signin';
               variant="hero" 
               size="sm"
               className="mr-2"
-              onClick={() => toast({ title: "Free Trial Started!", description: "Welcome to MetaDesk! Setting up your workspace..." })}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/start-free-trial';
+                toast({ title: "Free Trial Started!", description: "Welcome to MetaDesk! Setting up your workspace..." });
+              }}
             >
               Try Free
             </Button>
