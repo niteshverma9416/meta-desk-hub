@@ -170,9 +170,11 @@ window.location.href = '/signin';
                     variant="ghost" 
                     size="lg"
                     className="justify-start text-lg"
-                    onClick={() => {
-                      setIsOpen(false);
-                      toast({ title: "Sign In", description: "Redirecting to sign in page..." });
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick('signin', () => {
+                        window.location.href = '/signin';
+                      });
                     }}
                   >
                     Sign In

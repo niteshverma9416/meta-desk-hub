@@ -9,7 +9,7 @@ import PricingPage from "./pages/Pricing";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import SigninPage from "./pages/Signin";
+import SigninPage from "./pages/SingIn";
 import  StartFreeTrialPage from "./pages/StartFreeTrial";
 
 const queryClient = new QueryClient();
