@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const SinginPage = () => {
+const SigninPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -127,4 +127,4 @@ const SinginPage = () => {
   );
 };
 
-export default SinginPage;
+export default SigninPage;
