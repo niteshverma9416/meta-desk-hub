@@ -77,7 +77,7 @@ const Header = () => {
               className="hidden lg:inline-flex"
               onClick={(e) => {
                 e.preventDefault();
-                window.location.href = '/singin';
+window.location.href = '/signin';
               }}
             >
               Sign In
