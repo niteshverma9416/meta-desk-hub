@@ -2,12 +2,14 @@ import Header from "@/components/Header";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { theme } = useTheme();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-background'}`}>
       <Header />
       <main className="pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="container mx-auto px-4 lg:px-6">
@@ -106,7 +108,13 @@ const SignUpPage = () => {
                   required
                 />
                 <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
-                  I agree to the <a href="/terms" className="text-primary hover:text-primary-hover">Terms of Service</a> and <a href="/privacy" className="text-primary hover:text-primary-hover">Privacy Policy</a>.
+                  I agree to the <a href="/terms" className="text-primary hover:text-primary-hover" 
+                   onClick={(e) => {
+                                  e.preventDefault();
+                                  window.location.href = '/terms';
+                                  
+                                }}
+                  >Terms of Service</a> and <a href="/privacy" className="text-primary hover:text-primary-hover">Privacy Policy</a>.
                 </label>
               </div>
               <button

@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { toast } from "@/hooks/use-toast";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const handleNavClick = (section: string, action: () => void) => {
     setIsOpen(false);
@@ -68,8 +70,28 @@ const Header = () => {
             >
               Contact Us
             </a>
+            {/* Settings Link */}
+            <a 
+              href="/settings" 
+              className="text-foreground/80 hover:text-primary transition-colors font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/settings';
+              }}
+            >
+              Settings
+            </a>
           </div>
           
+          {/* Theme Toggle Button */}
+          <Button 
+            variant="ghost" 
+            onClick={toggleTheme}
+            className="hidden md:inline-flex"
+          >
+            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </Button>
+
           {/* Desktop Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button 
@@ -167,6 +189,19 @@ window.location.href = '/signin';
                   >
                     About
                   </a>
+                  {/* Mobile Settings Link */}
+                  <a 
+                    href="/settings" 
+                    className="text-xl font-medium text-foreground/80 hover:text-primary transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick('settings', () => {
+                        window.location.href = '/settings';
+                      });
+                    }}
+                  >
+                    Settings
+                  </a>
                 </nav>
                 
                 <div className="flex flex-col space-y-4 pt-8">
@@ -198,6 +233,8 @@ window.location.href = '/signin';
                   >
                     Start Free Trial
                   </Button>
+
+                  
                 </div>
               </div>
             </SheetContent>

@@ -39,7 +39,11 @@ const StartFreeTrialPage = () => {
               <span className="text-muted-foreground">/month</span>
             </div>
 
-            <button className="w-full bg-primary text-white py-3 rounded-xl font-semibold hover:bg-primary-hover transition">
+            <button className="w-full bg-primary text-white py-3 rounded-xl font-semibold hover:bg-primary-hover transition"
+              onClick={() => {
+                window.location.href = '/signup';
+              }}
+            >
               Start Free Trial
             </button>
 

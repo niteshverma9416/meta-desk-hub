@@ -2,12 +2,14 @@ import Header from "@/components/Header";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const SigninPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { theme } = useTheme();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-background'}`}>
       <Header />
       <main className="pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="container mx-auto px-4 lg:px-6">
