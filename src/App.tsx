@@ -15,6 +15,8 @@ import  StartFreeTrialPage from "./pages/StartFreeTrial";
 import SignUpPage from "./pages/SingUp";
 import TermsPage from "./pages/Terms";
 import Settings from "./pages/Settings";
+import Hero from "./components/Hero";
+import HeroPage from "./pages/HeroPage";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,7 @@ const App = () => (
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/hero" element={<HeroPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

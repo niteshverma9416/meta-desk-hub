@@ -22,7 +22,16 @@ const Header = () => {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">M</span>
             </div>
-            <span className="text-xl font-bold text-foreground" >MetaDesk</span>
+            <a 
+              href="#hero" 
+              className="text-xl font-bold text-foreground"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/hero';
+              }}
+            >
+              MetaDesk
+            </a>
           </div>
           
           {/* Desktop Navigation */}
@@ -177,7 +186,7 @@ window.location.href = '/signin';
                   >
                     Pricing
                   </a>
-                  <a 
+                  <a
                     href="/about" 
                     className="text-xl font-medium text-foreground/80 hover:text-primary transition-colors"
                     onClick={(e) => {
